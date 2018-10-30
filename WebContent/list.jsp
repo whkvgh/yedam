@@ -15,7 +15,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">  
-				<a href="list.do">회원가입</a></td>
+				<a href="index.jsp">회원가입</a></td>
 			</tr>
 			<tr>
 				<td colspan="2">  
