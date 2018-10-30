@@ -14,7 +14,7 @@
 				<a href="list.do">목록보기</a></td>
 			</tr>
 			<tr>
-				<td> 회원가입 </td>
+				<td> 회원가입 </td>dd
 				<td> <input type="text" name="bTitle" size = "50"> </td>
 			</tr>
 			<tr>
