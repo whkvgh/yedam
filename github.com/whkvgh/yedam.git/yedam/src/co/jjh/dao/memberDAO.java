@@ -30,33 +30,6 @@ public class memberDAO {
 			e.printStackTrace();
 		}
 	}
-
-	public ArrayList<memberDTO> deletemember() {	//회원정보 삭제
-		ArrayList<memberDTO> list = new ArrayList<memberDTO>();
-		String sql = "delete from user_t where id =?";
-		try {
-			conn = ds.getConnection();
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, dto.getuId());
-			psmt.executeUpdate();
-			
-		} catch(Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (rs != null)
-					rs.close();
-				if (psmt != null)
-					rs.close();
-				if (conn != null)
-					rs.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
-	}
-
 	public ArrayList<memberDTO> getmemberall() { // 회원 전체 보기
 		ArrayList<memberDTO> list = new ArrayList<memberDTO>();
 		String sql = "select * from user_t";
@@ -94,4 +67,31 @@ public class memberDAO {
 		}
 		return list;
 	}
+	public ArrayList<memberDTO> deletemember() {	//회원정보 삭제
+		ArrayList<memberDTO> list = new ArrayList<memberDTO>();
+		String sql = "delete from user_t where id =?";
+		try {
+			conn = ds.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, dto.getuId());
+			psmt.executeUpdate();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (psmt != null)
+					rs.close();
+				if (conn != null)
+					rs.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+
+	
 }
